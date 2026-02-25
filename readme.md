@@ -1,8 +1,8 @@
 Simple Banking CLI
 Um sistema bancário via terminal desenvolvido em Python puro, com foco em segurança, integridade de dados e boas práticas de backend.
 A proposta foi ir além do CRUD básico e aplicar conceitos reais de engenharia de software que sistemas financeiros utilizam no mundo real.
-Objetivo do Projeto
 
+Objetivo do Projeto
 Demonstrar que é possível construir um backend:
 Seguro
 Transacional
@@ -11,8 +11,8 @@ Sem dependências externas
 Utilizando apenas a biblioteca padrão do Python
 
 Decisões Técnicas (e o porquê)
-1. O Problema do Ponto Flutuante
 
+1. O Problema do Ponto Flutuante
 Nunca utilizei float para valores monetários.
 Valores como 10.50 não são representados com precisão binária, o que pode gerar erros acumulativos invisíveis.
 
@@ -26,7 +26,6 @@ Resultado: cálculos 100% determinísticos.
 Não utilizei MD5, SHA1 ou SHA256 puro.
 
 Minha solução:
-
 PBKDF2-HMAC-SHA256
 200.000 iterações
 Salt aleatório de 16 bytes por usuário
@@ -41,7 +40,6 @@ Transferências bancárias precisam ser atômicas.
 Não existe "tirar o dinheiro e torcer para dar certo".
 
 Minha solução:
-
 SQLite em modo WAL (Write-Ahead Logging)
 Transações explícitas com BEGIN IMMEDIATE
 COMMIT e ROLLBACK controlados manualmente
@@ -51,7 +49,6 @@ Se houver falha durante uma operação:
 
 Modelagem de Dados
 O sistema foi modelado para garantir integridade referencial:
-
 Tabelas principais:
 
 users
@@ -60,10 +57,9 @@ transactions (registro completo de auditoria)
 Relacionamentos são protegidos com foreign keys ativadas no SQLite.
 
 Funcionalidades
+
 Área do Cliente
-
 Login seguro (senha oculta via getpass)
-
 Depósitos
 Saques (com validação de saldo)
 Transferências entre usuários
@@ -110,4 +106,5 @@ Sistema de bloqueio por tentativas de login
 
 Diego Henrique
 Estudante de Análise e Desenvolvimento de Sistemas
+
 Se quiser discutir decisões de arquitetura ou melhorias, estou sempre aberto a feedback.
