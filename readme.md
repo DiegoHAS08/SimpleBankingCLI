@@ -1,4 +1,5 @@
 Simple Banking CLI
+
 Um sistema bancário via terminal desenvolvido em Python puro, com foco em segurança, integridade de dados e boas práticas de backend.
 A proposta foi ir além do CRUD básico e aplicar conceitos reais de engenharia de software que sistemas financeiros utilizam no mundo real.
 
@@ -104,3 +105,4 @@ Diego Henrique
 Desenvolvedor Web Júnior | PHP • Python • MySQL | APIs REST | Estudante de Análise e Desenvolvimento de Sistemas
 
 Se quiser discutir decisões de arquitetura ou melhorias, estou sempre aberto a feedback.
+
