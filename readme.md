@@ -72,18 +72,15 @@ Registro de auditoria em todas as operações administrativas
 
 Como Executar
 Não é necessário instalar nenhuma biblioteca.
-
-git clone https://github.com/seu-usuario/seu-repo.git
-cd seu-repo
-python main.py
-Usuário Admin Padrão
+git clone https://github.com/DiegoHAS08/SimpleBankingCLI.git
+cd SimpleBankingCLI
+python bank_app.py
 
 Na primeira execução o sistema cria automaticamente:
-
 Usuário: admin
 Senha:   admin123
-
 ⚠ Recomenda-se alterar após o primeiro acesso.
+
 Conceitos Aplicados
 Hashing com derivação de chave
 Atomicidade (ACID)
@@ -103,8 +100,7 @@ Controle de sessão
 Sistema de bloqueio por tentativas de login
 
 👨‍💻 Autor
-
 Diego Henrique
-Estudante de Análise e Desenvolvimento de Sistemas
+Desenvolvedor Web Júnior | PHP • Python • MySQL | APIs REST | Estudante de Análise e Desenvolvimento de Sistemas
 
 Se quiser discutir decisões de arquitetura ou melhorias, estou sempre aberto a feedback.
